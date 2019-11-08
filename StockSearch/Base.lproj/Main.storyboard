@@ -7,6 +7,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Display Stock News View Controller-->
+        <scene sceneID="Vgh-l7-C8j">
+            <objects>
+                <viewController id="ZHt-2w-qWT" customClass="DisplayStockNewsViewController" customModule="StockSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVt-ol-eeH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="newstitle" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6B9-RL-bYj">
+                                <rect key="frame" x="54" y="135" width="306" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-uv-2Ye" userLabel="d">
+                                <rect key="frame" x="40" y="781" width="84" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Tpe-5V-Ujc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IDr-kC-R29"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BWt-cT-brv"/>
+                    <connections>
+                        <outlet property="newstitle" destination="6B9-RL-bYj" id="vmc-oy-0bG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhE-eS-nCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-757.97101449275374" y="118.52678571428571"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -39,7 +74,8 @@
                     <connections>
                         <outlet property="getStockButton" destination="o4c-Th-Isx" id="nbT-s3-zRp"/>
                         <outlet property="stockInfo" destination="fX3-8i-7Aj" id="CBw-z6-tsI"/>
-                        <segue destination="aYg-R3-Wql" kind="presentation" identifier="segue" modalPresentationStyle="fullScreen" id="Vyi-sl-gMs"/>
+                        <segue destination="aYg-R3-Wql" kind="presentation" identifier="dataSegue" modalPresentationStyle="fullScreen" id="Vyi-sl-gMs"/>
+                        <segue destination="ZHt-2w-qWT" kind="presentation" identifier="newsSegue" modalPresentationStyle="fullScreen" id="vde-dT-ng2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,7 +125,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFy-6a-Dg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.8115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1054" y="119"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tpe-5V-Ujc"/>
+    </inferredMetricsTieBreakers>
 </document>

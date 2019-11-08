@@ -16,6 +16,7 @@
 		71DC86B523598AF6007D198F /* StockSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC86B423598AF6007D198F /* StockSearchTests.swift */; };
 		71DC86C023598AF6007D198F /* StockSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC86BF23598AF6007D198F /* StockSearchUITests.swift */; };
 		EAC2758223754A0700E4C02C /* DisplayStockInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2758123754A0700E4C02C /* DisplayStockInfoViewController.swift */; };
+		EAC2758423755E3900E4C02C /* DisplayStockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2758323755E3900E4C02C /* DisplayStockNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		71DC86BF23598AF6007D198F /* StockSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchUITests.swift; sourceTree = "<group>"; };
 		71DC86C123598AF6007D198F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC2758123754A0700E4C02C /* DisplayStockInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStockInfoViewController.swift; sourceTree = "<group>"; };
+		EAC2758323755E3900E4C02C /* DisplayStockNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStockNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				71DC86A623598AF6007D198F /* Assets.xcassets */,
 				71DC86A823598AF6007D198F /* LaunchScreen.storyboard */,
 				71DC86AB23598AF6007D198F /* Info.plist */,
+				EAC2758323755E3900E4C02C /* DisplayStockNewsViewController.swift */,
 			);
 			path = StockSearch;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC2758223754A0700E4C02C /* DisplayStockInfoViewController.swift in Sources */,
+				EAC2758423755E3900E4C02C /* DisplayStockNewsViewController.swift in Sources */,
 				71DC86A223598AF6007D198F /* ViewController.swift in Sources */,
 				71DC869E23598AF6007D198F /* AppDelegate.swift in Sources */,
 				71DC86A023598AF6007D198F /* SceneDelegate.swift in Sources */,

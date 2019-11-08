@@ -44,13 +44,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var getStockButton: UIButton!
     @IBOutlet weak var stockInfo: UIButton!
+    public var stockName : String = "Stock Name: AAPL";
+    public var stockPrice : String = "Stock Price: $259.35";
+    public var newsTitle : String = "WhatsApp adds shopping catalog feature, courting e-commerce";
+
+    
+    
     
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var DisplayStockInfo = segue.destination as! DisplayStockInfoViewController
-        DisplayStockInfo.myString = "Stock Name: APPL"
-        DisplayStockInfo.stockPrice = "Stock Price: $123.2"
+        if segue.identifier == "dataSegue" {
+            var DisplayStockInfo = segue.destination as! DisplayStockInfoViewController
+            DisplayStockInfo.myString = stockName;
+            DisplayStockInfo.stockPrice = stockPrice;
+        } else if segue.identifier == "newsSegue" {
+        
+        var DisplayStockNews = segue.destination as! DisplayStockNewsViewController
+               DisplayStockNews.newsTitle = newsTitle;
+        }
     }
     
     @IBAction func didPressedGetStockButton(_ sender: UIButton) {
@@ -71,7 +83,7 @@ class ViewController: UIViewController {
            }
         }
         task.resume()
-        performSegue(withIdentifier: "segue" , sender: self)
+        performSegue(withIdentifier: "dataSegue" , sender: self)
 
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let vc = storyboard.instantiateViewController(withIdentifier: "DisplayStockInfo") as UIViewController
@@ -99,6 +111,7 @@ class ViewController: UIViewController {
            }
         }
         task.resume()
+        performSegue(withIdentifier: "newsSegue" , sender: self)
     }
     
     
