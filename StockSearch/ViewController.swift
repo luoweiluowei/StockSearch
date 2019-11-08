@@ -45,6 +45,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var getStockButton: UIButton!
     @IBOutlet weak var stockInfo: UIButton!
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var DisplayStockInfo = segue.destination as! DisplayStockInfoViewController
+        DisplayStockInfo.myString = "Stock Name: APPL"
+        DisplayStockInfo.stockPrice = "Stock Price: $123.2"
+    }
+    
     @IBAction func didPressedGetStockButton(_ sender: UIButton) {
         guard let url = URL(string: "https://financialmodelingprep.com/api/v3/stock/real-time-price/AAPL") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -56,13 +64,20 @@ class ViewController: UIViewController {
                 let stockResult  = try
                     JSONDecoder().decode(StockResult.self, from: dataResponse);
                 //print the first element from the websiteResult array
-                print(stockResult.symbol)
+                print(stockResult)
                 
              } catch let parsingError {
                 print("Error", parsingError)
            }
         }
         task.resume()
+        performSegue(withIdentifier: "segue" , sender: self)
+
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "DisplayStockInfo") as UIViewController
+//        vc.label = "12345"
+//        self.present(vc, animated: true, completion: nil)
+        
        
     }
     
